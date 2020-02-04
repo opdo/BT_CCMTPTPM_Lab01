@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>DENTAL PAYMENT FORM</title>
+</head>
+
+<body class="container" style="width: 70%">
+    <h1 class="text-center" style="color:blue; padding-top: 50px"><b>DENTAL PAYMENT FORM</b></h1>
+
+    <div class="row">
+
+        <div class="col">
+            <div class="form-group">
+                <label for="edtTen">Tên khách hàng</label>
+                <input type="text" class="form-control" id="edtTen" onchange="autoFixName()" placeholder="Nhập tên của bạn">
+            </div>
+
+            <div class="row">
+                <div class="col-8">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="cbCaoVoi">
+                        <label class="custom-control-label" for="cbCaoVoi">Cạo vôi</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <i class="fa fa-usd" aria-hidden="true"></i>100.000
+                </div>
+
+                <div class="col-8">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="cbTayTrang">
+                        <label class="custom-control-label" for="cbTayTrang">Tẩy trắng</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <i class="fa fa-usd" aria-hidden="true"></i>1.200.000
+                </div>
+
+                <div class="col-8">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="cbChupHinh">
+                        <label class="custom-control-label" for="cbChupHinh">Chụp hình răng</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <i class="fa fa-usd" aria-hidden="true"></i>200.000
+                </div>
+
+                <div class="col-8">
+                    <div class="form-group row">
+                        <label for="edtTram" class="col-auto">Trám răng</label>
+                        <input type="number" min="0" max="50" class="form-control col-4" id="edtTram" value="0">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <i class="fa fa-usd" aria-hidden="true"></i>80.000/cái
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="listKH">Danh sách</label>
+                <select class="form-control" id="listKH" size="10" onchange="loadCustomer()">
+               
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    <div class="text-right">
+        <h3>Tổng tiền: <i class="fa fa-usd" aria-hidden="true"></i><span id="txtTien">0</span></h3>
+        <button type="button" class="btn-lg btn btn-success" onclick="loadInfo()"><i class="fa fa-database" aria-hidden="true"></i> Tải dữ liệu</button>
+        <button type="button" class="btn-lg btn btn-warning" onclick="reset()"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</button>
+        <button type="button" class="btn-lg btn btn-primary" onclick="tinhTien()"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Tính tiền</button>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+                <script src="dental.js"></script>
+</body>
+
+</html>
